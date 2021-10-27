@@ -7,7 +7,9 @@ import os
 
 app = Flask(__name__)
 
-client = MongoClient("mongodb://127.0.0.1:27017") #host uri  
+client = MongoClient("mongodb+srv://root:<password>@cluster0.bloir.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+# client = MongoClient("mongodb://127.0.0.1:27017") #host uri  
+
 db = client.todo_app #Select the database  
 todos = db.todo #Select the collection name 
 
